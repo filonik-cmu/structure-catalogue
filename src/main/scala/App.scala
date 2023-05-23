@@ -9,6 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 
 import Routes.{*, given}
+import pages.*
 
 @js.native
 @JSImport("stylesheets/app.css", JSImport.Namespace)
@@ -18,26 +19,9 @@ object App {
   val css: Css.type = Css
 
   val splitter = SplitRender[Page, HtmlElement](router.currentPageSignal)
-    .collectSignal[ItemPage] { userPageSignal => renderUserPage(userPageSignal) }
-    .collectStatic(HomePage) { renderHomePage() }
+    .collectSignal[ItemPage] { ItemPageRender.render }
+    .collectStatic(HomePage) { HomePageRender.render }
  
-  def renderHomePage(): Div = {
-    div(
-      "Home Page",
-      ul(
-        Range(1,10).map { id =>
-          li(a(href(router.absoluteUrlForPage(ItemPage(id))), s"Item #$id"))
-        }
-      )
-    )
-  }
-
-  def renderUserPage(userPageSignal: Signal[ItemPage]): Div = {
-    div(
-      "Item Page",
-      child.text <-- userPageSignal.map(itemPage => itemPage.id)
-    )
-  }
   
   def main(args: Array[String]): Unit = {
     lazy val container = dom.document.getElementById("app-container")

@@ -4,11 +4,9 @@ import com.raquo.laminar.api.L.{*, given}
 import com.raquo.waypoint.*
 import upickle.default.*
 
-object Routes {
-  sealed abstract class Page(val title: String)
-  case object HomePage extends Page("Home")
-  case class ItemPage(val id: Int) extends Page("Item")
+import pages.* 
 
+object Routes {
   given HomePageRW: ReadWriter[HomePage.type] = macroRW
   given ItemPageRW: ReadWriter[ItemPage] = macroRW
   given rw: ReadWriter[Page] = macroRW
