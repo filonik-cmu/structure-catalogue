@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.JSImport
 import org.scalajs.dom
 
 object PageHeader {
+  // TODO: https://github.com/scala-js/scala-js/issues/2818
   @js.native
   @JSImport("/favicon.svg", JSImport.Default)
   private object _logo extends js.Any
   def logo: String = _logo.asInstanceOf[String]
 
-  def apply(): HtmlElement = {
-    dom.console.log(logo)
+  def apply(): HtmlElement = 
     headerTag(
       cls := "flex flex-row items-center justify-center",
       img(
@@ -25,6 +25,5 @@ object PageHeader {
         a(href := "/", "The Data Structure Catalogue")
       ),
     )
-  }
 
 }

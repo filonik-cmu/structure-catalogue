@@ -1,5 +1,7 @@
 package example
 
+import scala.scalajs.js.`import`
+
 import com.raquo.laminar.api.L.{*, given}
 import com.raquo.waypoint.*
 import upickle.default.*
@@ -11,13 +13,16 @@ object Routes {
   given ItemPageRW: ReadWriter[ItemPage] = macroRW
   given rw: ReadWriter[Page] = macroRW
 
+  //val basePath: String =  Router.localFragmentBasePath
+  val basePath: String = `import`.meta.env.BASE_URL.asInstanceOf[String]
+
   private val routes = List(
-    Route.static(HomePage, root / endOfSegments, Router.localFragmentBasePath),
+    Route.static(HomePage, root / endOfSegments, basePath),
     Route[ItemPage, Int](
       encode = itemPage => itemPage.id,
       decode = id => ItemPage(id=id),
       pattern = root / "items" / segment[Int] / endOfSegments,
-      basePath = Router.localFragmentBasePath,
+      basePath = basePath,
     )
   )
 
