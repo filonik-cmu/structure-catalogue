@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.JSImport
 
 import org.scalajs.dom
 
+import example.Routes.*
+
 object PageHeader {
   // TODO: https://github.com/scala-js/scala-js/issues/2818
   @js.native
@@ -22,7 +24,10 @@ object PageHeader {
         src := logo,
       ),
       h1(
-        a(href := "/", "The Data Structure Catalogue")
+        a(
+          href := router.absoluteUrlForPage(HomePage),
+          "The Data Structure Catalogue"
+        )
       ),
     )
 
