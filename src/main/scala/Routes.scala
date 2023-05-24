@@ -14,7 +14,7 @@ object Routes {
   given rw: ReadWriter[Page] = macroRW
 
   //val basePath: String =  Router.localFragmentBasePath
-  val basePath: String = `import`.meta.env.BASE_URL.asInstanceOf[String] //.slice(1, -1)
+  val basePath: String = `import`.meta.env.BASE_URL.asInstanceOf[String] + "#" //.slice(1, -1)
 
   private val routes = List(
     Route.static(HomePage, root / endOfSegments, basePath),
