@@ -6,6 +6,8 @@ import com.raquo.laminar.api.L.{*, given}
 import com.raquo.waypoint.*
 import upickle.default.*
 
+import org.scalajs.dom
+
 import pages.* 
 
 object Routes {
@@ -14,7 +16,9 @@ object Routes {
   given rw: ReadWriter[Page] = macroRW
 
   //val basePath: String =  Router.localFragmentBasePath
-  val basePath: String = `import`.meta.env.BASE_URL.asInstanceOf[String] + "/#" //.slice(1, -1)
+  def basePath: String = {
+    `import`.meta.env.BASE_URL.asInstanceOf[String] + "#"
+  }
 
   private val routes = List(
     Route.static(HomePage, root / endOfSegments, basePath),
