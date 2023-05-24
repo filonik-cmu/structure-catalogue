@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "buildForGithubPages": "vite build --base=/structure-catalogue",
+    "gh-pages:build": "vite build --base=/structure-catalogue",
     "serve": "vite preview"
   },
   "type": "module",
