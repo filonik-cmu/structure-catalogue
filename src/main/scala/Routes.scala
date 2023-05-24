@@ -17,16 +17,17 @@ object Routes {
       encode = itemPage => itemPage.id,
       decode = id => ItemPage(id=id),
       pattern = root / "items" / segment[Int] / endOfSegments,
+      basePath = Router.localFragmentBasePath,
     )
   )
 
   val router = new Router[Page](
     routes = routes,
-    getPageTitle = _.title, // displayed in the browser tab next to favicon
-    serializePage = page => write(page)(rw), // serialize page data for storage in History API log
-    deserializePage = pageStr => read(pageStr)(rw) // deserialize the above
+    getPageTitle = _.title,
+    serializePage = page => write(page)(rw),
+    deserializePage = pageStr => read(pageStr)(rw)
   )(
-    popStateEvents = windowEvents(_.onPopState), // this is how Waypoint avoids an explicit dependency on Laminar
-    owner = unsafeWindowOwner // this router will live as long as the window
+    popStateEvents = windowEvents(_.onPopState),
+    owner = unsafeWindowOwner
   )
 }

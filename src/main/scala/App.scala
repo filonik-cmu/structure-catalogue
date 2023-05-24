@@ -22,13 +22,19 @@ object App {
     .collectSignal[ItemPage] { ItemPageRender.render }
     .collectStatic(HomePage) { HomePageRender.render }
  
-  
   def main(args: Array[String]): Unit = {
-    lazy val container = dom.document.getElementById("app-container")
+    lazy val container = dom.document.getElementById("app")
 
     lazy val myApp = div(
-      h1(a(href("/"), "Routing App")),
-      child <-- splitter.signal
+      cls := "h-full flex flex-col",
+      PageHeader(),
+      mainTag(
+        cls := "flex-grow w-full",
+        child <-- splitter.signal
+      ),
+      PageFooter(
+        span(cls := "opacity-50", "© 2023")
+      ),
     )
 
     renderOnDomContentLoaded(container, myApp)

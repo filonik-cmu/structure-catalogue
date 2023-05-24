@@ -1,5 +1,33 @@
+html {
+  font-family: Roboto,sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+
+  @apply bg-white dark:bg-neutral-800 text-gray-800 dark:text-gray-200;
+}
+
+body {
+  @apply h-[100svh];
+}
+
+header {
+  @apply py-2 shadow-lg dark:shadow-black/50;
+}
+
+footer {
+  @apply bg-slate-100 text-neutral-600 dark:bg-neutral-900 dark:text-neutral-100;
+}
+
+main {
+  @apply flex-grow max-w-3xl mx-auto my-4;
+}
+
 h1 {
-  @apply font-bold text-3xl my-2;
+  @apply font-semibold text-2xl my-2;
+}
+
+h2 {
+  @apply font-semibold text-xl my-2;
 }
 
 ul {
