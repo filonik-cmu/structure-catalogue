@@ -55,7 +55,7 @@ object HomePageRender {
         a(
           href := "#" + item.path,
           div(
-            cls := "max-w-sm rounded overflow-hidden shadow-lg",
+            cls := "max-w-sm rounded overflow-hidden shadow-lg dark:shadow-black/50",
             div(
               cls := "px-6 py-4",
               div(
@@ -63,7 +63,7 @@ object HomePageRender {
                 item.title
               ),
               p(
-                cls := "text-gray-700 text-base",
+                cls := "text-base opacity-70",
                 item.description,
               )
             )

@@ -50,7 +50,7 @@ object StructurePageRender {
       hr(cls := "my-2"),
       h3("Schema"),
       pre(
-        cls := "p-2 text-sm bg-neutral-100",
+        cls := "p-2 text-sm bg-neutral-100 dark:bg-neutral-900",
         child.text <-- schema.data.map(pprint)
       )
     )
