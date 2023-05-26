@@ -1,0 +1,10 @@
+[
+  { "id": 1, "title": "Graph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/Graph" },
+  { "id": 2, "title": "SymmetricGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/SymmetricGraph" },
+  { "id": 3, "title": "ReflexiveGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/ReflexiveGraph" },
+  { "id": 4, "title": "SymmetricReflexiveGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/SymmetricReflexiveGraph" },
+  { "id": 5, "title": "HalfEdgeGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/HalfEdgeGraph" },
+  { "id": 6, "title": "LabeledGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/LabeledGraph" },
+  { "id": 7, "title": "WeightedGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/WeightedGraph" },
+  { "id": 8, "title": "SymmetricWeightedGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/SymmetricWeightedGraph" }
+]

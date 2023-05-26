@@ -1,0 +1,1 @@
+{"version":{"ACSetSchema":"0.0.1","Catlab":"0.0.0"},"Ob":[{"name":"V"},{"name":"H"}],"Hom":[{"name":"vertex","codom":"V","dom":"H"},{"name":"inv","codom":"H","dom":"H"}],"AttrType":[],"Attr":[]}

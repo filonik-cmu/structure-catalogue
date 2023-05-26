@@ -1,0 +1,6 @@
+{ 
+  "id": 1, 
+  "title": "ReflexiveGraph", 
+  "description": "A reflexive graph. Reflexive graphs are graphs in which every vertex has a distinguished self-loop.",
+  "schema": "SchReflexiveGraph"
+}
