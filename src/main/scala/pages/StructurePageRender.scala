@@ -15,9 +15,9 @@ object StructurePageRender {
 
   def render(structurePageSignal: Signal[StructurePage]): HtmlElement = {
     val content =
-      structurePageSignal.map { page =>
+      structurePageSignal.map { structure =>
         Fetch
-          .get(s"/api/structures/${page.id}.json")
+          .get(API.getStructure(structure.id))
           .decodeEither[Error, StructureModel]
           .data
           .map {
@@ -40,7 +40,7 @@ object StructurePageRender {
   private def renderStructure(structure: StructureModel) = {
     val schema = 
       Fetch
-        .get(s"/api/schemas/${structure.schema}.json")
+        .get(API.getSchema(structure.schema))
         .text
     
     div(

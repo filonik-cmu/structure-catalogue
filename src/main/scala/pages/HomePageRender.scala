@@ -22,6 +22,7 @@ object HomePageRender {
 
 import concurrent.ExecutionContext.Implicits.global
 
+
 import com.raquo.laminar.api.L.*
 import io.laminext.fetch.circe.*
 
@@ -32,7 +33,7 @@ object HomePageRender {
   def render: HtmlElement = {
     val content = {
       Fetch
-        .get("/api/structures/index.json")
+        .get(API.getAllStructures)
         .decodeEither[Error, List[ItemModel]]
         .data
         .map {
