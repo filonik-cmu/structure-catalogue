@@ -1,0 +1,1 @@
+{"version":{"ACSetSchema":"0.0.1","Catlab":"0.0.0"},"Ob":[{"name":"V"},{"name":"E"}],"Hom":[{"name":"src","codom":"V","dom":"E"},{"name":"tgt","codom":"V","dom":"E"}],"AttrType":[{"name":"Weight"}],"Attr":[{"name":"weight","codom":"Weight","dom":"E"}]}

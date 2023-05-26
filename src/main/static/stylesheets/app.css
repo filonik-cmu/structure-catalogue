@@ -27,7 +27,11 @@ h1 {
 }
 
 h2 {
-  @apply font-semibold text-xl my-2;
+  @apply font-semibold text-2xl my-4;
+}
+
+h3 {
+  @apply italic text-lg mt-4 mb-2;
 }
 
 ul {

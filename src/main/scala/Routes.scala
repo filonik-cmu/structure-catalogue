@@ -6,13 +6,14 @@ import com.raquo.laminar.api.L.{*, given}
 import com.raquo.waypoint.*
 import upickle.default.*
 
-import org.scalajs.dom
+//import org.scalajs.dom
 
 import pages.* 
 
 object Routes {
   given HomePageRW: ReadWriter[HomePage.type] = macroRW
   given ItemPageRW: ReadWriter[ItemPage] = macroRW
+  given StructurePageRw: ReadWriter[StructurePage] = macroRW
   given rw: ReadWriter[Page] = macroRW
 
   //val basePath: String =  Router.localFragmentBasePath
@@ -24,8 +25,14 @@ object Routes {
     Route.static(HomePage, root / endOfSegments, basePath),
     Route[ItemPage, Int](
       encode = itemPage => itemPage.id,
-      decode = id => ItemPage(id=id),
+      decode = id => ItemPage(id = id),
       pattern = root / "items" / segment[Int] / endOfSegments,
+      basePath = basePath,
+    ),
+    Route[StructurePage, String](
+      encode = structurePage => structurePage.id,
+      decode = id => StructurePage(id = id),
+      pattern = root / "structures" / segment[String] / endOfSegments,
       basePath = basePath,
     )
   )

@@ -1,0 +1,6 @@
+{ 
+  "id": 1, 
+  "title": "WeightedGraph", 
+  "description": "A weighted graph. A graph in which every edge has a numerical weight.",
+  "schema": "SchWeightedGraph"
+}
