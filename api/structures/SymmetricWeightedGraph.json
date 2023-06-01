@@ -1,6 +1,10 @@
 { 
   "id": 1, 
   "title": "SymmetricWeightedGraph", 
+  "aliases": [],
   "description": "A symmetric weighted graph. A symmetric graph in which every edge has a numerical weight, preserved by the edge involution.",
-  "schema": "SchSymmetricWeightedGraph"
+  "schema": "SchSymmetricWeightedGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.SymmetricWeightedGraph" }
+  ]
 }

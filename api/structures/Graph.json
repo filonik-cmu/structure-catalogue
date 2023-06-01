@@ -1,6 +1,11 @@
 { 
   "id": 1, 
-  "title": "Graph", 
+  "title": "Graph",
+  "aliases": ["Directed Multigraph", "Directed Pseudograph", "Quiver"],
   "description": "A graph, also known as a directed multigraph.",
-  "schema": "SchGraph"
+  "schema": "SchGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.Graph" },
+    { "title": "nLab", "url": "https://ncatlab.org/nlab/show/quiver" }
+  ]
 }

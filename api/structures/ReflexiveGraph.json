@@ -1,6 +1,11 @@
 { 
   "id": 1, 
   "title": "ReflexiveGraph", 
+  "aliases": [],
   "description": "A reflexive graph. Reflexive graphs are graphs in which every vertex has a distinguished self-loop.",
-  "schema": "SchReflexiveGraph"
+  "schema": "SchReflexiveGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.ReflexiveGraph" },
+    { "title": "nLab", "url": "https://ncatlab.org/nlab/show/reflexive+graph" }
+  ]
 }

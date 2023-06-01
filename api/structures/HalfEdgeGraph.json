@@ -1,6 +1,10 @@
 { 
   "id": 1, 
   "title": "HalfEdgeGraph", 
+  "aliases": [],
   "description": "A half-edge graph. Half-edge graphs are a variant of undirected graphs whose edges are pairs of \"half-edges\" or \"darts\". Half-edge graphs are isomorphic to symmetric graphs but have a different data model.",
-  "schema": "SchHalfEdgeGraph"
+  "schema": "SchHalfEdgeGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.HalfEdgeGraph" }
+  ]
 }

@@ -1,6 +1,10 @@
 { 
   "id": 1, 
   "title": "SymmetricGraph", 
+  "aliases": [],
   "description": "A symmetric graph, or graph with an orientation-reversing edge involution. Symmetric graphs are closely related, but not identical, to undirected graphs.",
-  "schema": "SchSymmetricGraph"
+  "schema": "SchSymmetricGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.SymmetricGraph" }
+  ]
 }

@@ -1,10 +1,10 @@
 [
-  { "id": 1, "title": "Graph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/Graph" },
-  { "id": 2, "title": "SymmetricGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/SymmetricGraph" },
-  { "id": 3, "title": "ReflexiveGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/ReflexiveGraph" },
-  { "id": 4, "title": "SymmetricReflexiveGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/SymmetricReflexiveGraph" },
-  { "id": 5, "title": "HalfEdgeGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/HalfEdgeGraph" },
-  { "id": 6, "title": "LabeledGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/LabeledGraph" },
-  { "id": 7, "title": "WeightedGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/WeightedGraph" },
-  { "id": 8, "title": "SymmetricWeightedGraph", "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "path": "/structures/SymmetricWeightedGraph" }
+  { "id": 1, "title": "Graph", "description": "A graph, also known as a directed multigraph.", "path": "/structures/Graph" },
+  { "id": 2, "title": "SymmetricGraph", "description":  "A symmetric graph, or graph with an orientation-reversing edge involution. Symmetric graphs are closely related, but not identical, to undirected graphs.", "path": "/structures/SymmetricGraph" },
+  { "id": 3, "title": "ReflexiveGraph", "description": "A reflexive graph. Reflexive graphs are graphs in which every vertex has a distinguished self-loop.", "path": "/structures/ReflexiveGraph" },
+  { "id": 4, "title": "SymmetricReflexiveGraph", "description": "A symmetric reflexive graph. Symmetric reflexive graphs are both symmetric graphs (SymmetricGraph) and reflexive graphs (ReflexiveGraph) such that the reflexive loops are fixed by the edge involution.", "path": "/structures/SymmetricReflexiveGraph" },
+  { "id": 5, "title": "HalfEdgeGraph", "description": "A half-edge graph. Half-edge graphs are a variant of undirected graphs whose edges are pairs of \"half-edges\" or \"darts\". Half-edge graphs are isomorphic to symmetric graphs but have a different data model.", "path": "/structures/HalfEdgeGraph" },
+  { "id": 6, "title": "LabeledGraph", "description": "A labeled graph. By convention, a \"labeled graph\" without qualification is a vertex-labeled graph. We do not require that the label be unique, and in this data type, the label attribute is not indexed.", "path": "/structures/LabeledGraph" },
+  { "id": 7, "title": "WeightedGraph", "description": "A weighted graph. A graph in which every edge has a numerical weight.", "path": "/structures/WeightedGraph" },
+  { "id": 8, "title": "SymmetricWeightedGraph", "description": "A symmetric weighted graph. A symmetric graph in which every edge has a numerical weight, preserved by the edge involution.", "path": "/structures/SymmetricWeightedGraph" }
 ]
