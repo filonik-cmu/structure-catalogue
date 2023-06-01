@@ -1,6 +1,10 @@
 { 
   "id": 1, 
   "title": "SymmetricReflexiveGraph", 
+  "aliases": [],
   "description": "A symmetric reflexive graph. Symmetric reflexive graphs are both symmetric graphs (SymmetricGraph) and reflexive graphs (ReflexiveGraph) such that the reflexive loops are fixed by the edge involution.",
-  "schema": "SchSymmetricReflexiveGraph"
+  "schema": "SchSymmetricReflexiveGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.SymmetricReflexiveGraph" }
+  ]
 }

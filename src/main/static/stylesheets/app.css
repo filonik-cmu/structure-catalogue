@@ -18,8 +18,14 @@ footer {
   @apply bg-slate-100 text-neutral-600 dark:bg-neutral-900 dark:text-neutral-100;
 }
 
+/*
 main {
-  @apply flex-grow max-w-3xl mx-auto my-4;
+  @apply flex-grow max-w-3xl mx-auto;
+}
+*/
+
+main {
+  @apply px-6;
 }
 
 h1 {
@@ -31,9 +37,13 @@ h2 {
 }
 
 h3 {
-  @apply italic text-lg mt-4 mb-2;
+  @apply italic text-lg my-2;
 }
 
 ul {
   @apply list-disc ml-4;
+}
+
+pre {
+  @apply text-sm bg-neutral-100 dark:bg-neutral-900;
 }

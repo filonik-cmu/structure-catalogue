@@ -45,7 +45,10 @@ object HomePageRender {
             )
         }
     }
-    div(child <-- content)
+    div(
+      cls := "my-4 max-w-3xl mx-auto",
+      child <-- content
+    )
   }
 
   private def renderItems(items: List[ItemModel]) = {
@@ -59,11 +62,11 @@ object HomePageRender {
             div(
               cls := "px-6 py-4",
               div(
-                cls := "font-bold text-lg mb-2",
+                cls := "font-bold text-base mb-2",
                 item.title
               ),
               p(
-                cls := "text-base opacity-70",
+                cls := "text-sm opacity-70 line-clamp-3",
                 item.description,
               )
             )

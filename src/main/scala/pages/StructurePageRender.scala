@@ -10,6 +10,7 @@ import example.Routes.*
 import models.*
 
 import scala.scalajs.js
+import scala.annotation.targetName
 
 object StructurePageRender {
 
@@ -43,16 +44,63 @@ object StructurePageRender {
         .get(API.getSchema(structure.schema))
         .text
     
-    div(
-      cls := "flex flex-col",
+    def titleAndDescription = div(
       h2(structure.title),
-      p(structure.description),
-      hr(cls := "my-2"),
-      h3("Schema"),
-      pre(
-        cls := "p-2 text-sm bg-neutral-100 dark:bg-neutral-900",
-        child.text <-- schema.data.map(pprint)
+      if structure.aliases.length > 0 then
+        p(
+          cls := "-mt-3 mb-4",
+          "Also: ",
+          i(structure.aliases.mkString(", ")),
+        )
+      else
+        emptyNode
+      ,
+      p(structure.description)
+    )
+
+    def schemaAndInstance = div(
+        cls := "flex flex-row gap-2",
+        div(
+          cls := "w-1/2",
+          h3("Schema"),
+          pre(
+            cls := "p-2",
+            child.text <-- schema.data.map(pprint)
+          )
+        ),
+        div(
+          cls := "w-1/2",
+          h3("Instance"),
+          pre(
+            cls := "p-2",
+            "TODO"
+          )
+        )
       )
+    
+    def references = div(
+      h3("References"),
+      ul(
+        cls := "list-disc",
+        structure.references.map(reference =>  
+          li(
+            a(
+              href := reference.url,
+              target := "_blank",
+              reference.title
+            )
+          )
+        )
+      )
+    )
+
+    div(
+      cls := "mb-4 flex flex-col",
+      titleAndDescription,
+      hr(cls := "my-4"),
+      schemaAndInstance,
+      hr(cls := "my-4"),
+      references,
     )
   }
 }

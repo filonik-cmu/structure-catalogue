@@ -1,6 +1,10 @@
 { 
   "id": 1, 
   "title": "WeightedGraph", 
+  "aliases": [],
   "description": "A weighted graph. A graph in which every edge has a numerical weight.",
-  "schema": "SchWeightedGraph"
+  "schema": "SchWeightedGraph",
+  "references": [
+    { "title": "Catlab.jl", "url": "https://algebraicjulia.github.io/Catlab.jl/dev/apis/graphs/#Catlab.Graphs.BasicGraphs.WeightedGraph" }
+  ]
 }
